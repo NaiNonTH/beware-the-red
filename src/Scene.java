@@ -5,7 +5,7 @@ import java.lang.Exception;
 
 import javax.swing.*;
 
-class Scene extends JPanel implements Runnable {
+class Scene extends JPanel {
     ArrayList<Entity> entities = new ArrayList<Entity>();
 
     int windowWidth,
@@ -152,11 +152,6 @@ class Scene extends JPanel implements Runnable {
         
         g.setColor(Color.WHITE);
         g.drawString(scoreString, getWidth() - 16 - metrics.stringWidth(scoreString), metrics.getHeight());
-    }
-    
-    @Override
-    public void run() {
-        
     }
 
     public boolean mouseIsHovering(Entity entity) {
